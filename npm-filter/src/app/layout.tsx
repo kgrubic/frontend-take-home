@@ -3,11 +3,11 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import ReactQueryProvider from "./Provider/ReactQueryProvider";
 import dynamic from "next/dynamic";
-// import ThemeToggle from "./components/ThemeToggle";
+import ThemeToggle from "./components/ThemeToggle";
 
-const ThemeToggle = dynamic(() => import("./components/ThemeToggle"), {
-  ssr: false,
-});
+// const ThemeToggle = dynamic(() => import("./components/ThemeToggle"), {
+//   ssr: false,
+// });
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+      ></meta>
       <body className="bg-white dark:bg-slate-500">
         <ThemeToggle />
         <ReactQueryProvider>{children}</ReactQueryProvider>

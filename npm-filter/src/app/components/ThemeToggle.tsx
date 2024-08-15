@@ -1,4 +1,5 @@
 "use client";
+/* Component to switch theme. used localstorage so it preserves after refresh */
 import { useState, useEffect } from "react";
 
 const ThemeToggle = () => {
@@ -30,7 +31,7 @@ const ThemeToggle = () => {
       className="float-right border-solid border m-2 p-1 rounded-full dark:border-white dark:text-white"
       onClick={() => setDarkTheme((p) => !p)}
     >
-      {darkTheme ? "dark" : "light"}
+      Switch Theme
     </button>
   );
 };

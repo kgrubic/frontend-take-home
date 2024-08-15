@@ -10,7 +10,9 @@ export default function Home() {
   return (
     <div className="flex py-16 justify-center">
       <div>
-        <Filter setDebauncedValue={setDebauncedValue} />
+        <div className="flex justify-center ">
+          <Filter setDebauncedValue={setDebauncedValue} />
+        </div>
         <Suspense fallback={<Loading />}>
           <List filter={debaoundedValue} />
         </Suspense>
