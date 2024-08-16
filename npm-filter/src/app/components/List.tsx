@@ -25,7 +25,12 @@ const List = (ListProps: { filter: string }) => {
     enabled: ListProps.filter !== "",
   });
   if (isLoading) return <Loading />;
-  if (isError) return <div>Sorry There was an Error</div>;
+  if (isError)
+    return (
+      <div className="flex justify-center text-lg font-semibold dark:text-white">
+        There was an error. Remove search npm name and try again
+      </div>
+    );
   if (data?.lenght === 0) return <div>No data found</div>;
 
   return (
