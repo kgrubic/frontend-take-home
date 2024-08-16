@@ -10,6 +10,9 @@ export default function Home() {
   return (
     <div className="flex py-16 justify-center">
       <div>
+        <div className=" flex justify-center text-lg font-semibold dark:text-white">
+          Search for npm packages
+        </div>
         <div className="flex justify-center ">
           <Filter setDebauncedValue={setDebauncedValue} />
         </div>
